@@ -1,5 +1,3 @@
-
-
 :root {
     --primary-light-red: hsl(0, 36%, 70%);
     --primary-red: hsl(0, 93%, 68%);
@@ -17,6 +15,7 @@
 *::before,
 *::after {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -73,13 +72,13 @@ header {
 }
 
 .logo_icon {
-    padding: 2em;
+    position: relative;
+    margin: 1em;
 }
 
 .accent {
     color: var(--primary-light-red);
     font-weight: 300;
-
 }
 
 .hero_main_text {
@@ -99,7 +98,6 @@ input:required {
 }
 
 #user-email:focus {
-    
     border: 3px solid var(--primary-light-red);
     outline: none;
 }
@@ -146,7 +144,7 @@ li.footer__link {
 
 
 
-@media(min-width:600px){
+@media(min-width:600px) and (max-width: 765px){
 
     .hero_img_mobile {
         display: none;
@@ -154,27 +152,29 @@ li.footer__link {
 
     .hero_img_desktop {
         display: block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
     }
 
     .logo_icon {
-        padding: 5em 6em 0;
+        position: relative;
+        margin: 2em;
     }
 
-    .hero {
-        max-width: 60%;
-    }
-
-    h1,
-    .accent {
+    h1 {
         font-size: 5rem;
-        text-align: left;
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
     }
 
     .hero_main_text {
-        text-align: left;
+        text-align: center;
+        margin: 0 auto;
         width: 50%;
         
-        padding: 0 5.3em 0;
     }
 
     .hero_img_bg {
@@ -186,12 +186,6 @@ li.footer__link {
         height: 100%;  
     }
 
-    #user-email {
-        position: relative;
-        top: 3em;
-        right: 14em;
-    }
-
     .bg-pattern {
         background: url(/images/bg-pattern-desktop.svg);
         position: absolute;
@@ -200,13 +194,6 @@ li.footer__link {
         bottom: 0;
         left:0;
     }
-
     
-
-    .hero_img_mobile,
-    footer {
-        display: none;
-    }
-
 }
 
