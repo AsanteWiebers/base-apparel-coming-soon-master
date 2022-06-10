@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+}
+
+:root {
+    --primary-light-red: hsl(0, 36%, 70%);
+    --primary-red: hsl(0, 93%, 68%);
+    --primary-white: #FFF9F9;
+    --neutral-gray:hsl(0, 6%, 24%);
+
+    --ff-serif-primary: 'Josefin Sans', sans-serif;
+
+    --fs--primary: 1rem;
+    --fs--heading: 2.2rem;
+ 
+}
+
+h1,
+h2 {
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+    font-size: var(--fs--heading);
+    font-weight: 600;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+p {
+    color: var(--primary-light-red);
+}
+
+body {
+    font-family: var(--ff-serif-primary);
+    line-height: 1.6;
+    
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+}
+
+.hero {
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.logo_icon {
+    padding: 2em;
+}
+
+.accent {
+    color: var(--primary-light-red);
+    font-weight: 300;
+
+}
+
+.hero_main_text {
+    padding: 2em 0;
+}
+
+/* Email input form */
+
+#user-email {
+    padding: 1.3em 5em;
+    border-radius: 25px;
+    border: 1px solid var(--primary-light-red);
+}
+
+input:required {
+    border: 2px solid red;
+}
+
+#user-email:focus {
+    
+    border: 3px solid var(--primary-light-red);
+    outline: none;
+}
+
+::placeholder {
+    color: var(--primary-light-red);
+}
+
+/* Footer */
+
+.footer {
+    padding: 3em 1em;
+    margin: 0 auto;
+    width: 90%;
+}
+.footer-items {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+p.footer-text {
+    align-items: center;
+}
+
+.footer-icon {
+    color: var(--primary-light-red);
+}
+
+.footer_list {
+    display: flex;
+}
+
+li.footer__link {
+    padding: 0 .4em;
+}
+
+
+
+@media(min-width:600px){
+
+    .logo_icon {
+        padding: 5em 6em 0;
+    }
+
+    .hero {
+        max-width: 60%;
+    }
+
+    h1,
+    .accent {
+        font-size: 5rem;
+        text-align: left;
+    }
+
+    .hero_main_text {
+        text-align: left;
+        width: 50%;
+        
+        padding: 0 5.3em 0;
+    }
+
+    .hero_img_bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        max-width: 100%;
+        height: 100%;  
+    }
+
+    #user-email {
+        position: relative;
+        top: 3em;
+        right: 14em;
+    }
+
+    .bg-pattern {
+        background: url(/images/bg-pattern-desktop.svg);
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left:0;
+    }
+
+    
+
+    .hero_img_mobile,
+    footer {
+        display: none;
+    }
+
+}
+
